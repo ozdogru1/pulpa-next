@@ -96,9 +96,7 @@ export function SponsorsSection() {
                   <h4 className="text-xl font-bold text-blue-900   group-hover:text-blue-700 transition-colors duration-300">
                     {sponsor.name}
                   </h4>
-                  <p className="text-blue-700 text-sm leading-relaxed mb-4">
-                    {sponsor.description}
-                  </p>
+
 
                   {/* Decorative Element */}
                   <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto rounded-full group-hover:w-24 transition-all duration-300"></div>
