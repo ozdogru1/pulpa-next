@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
@@ -11,6 +12,7 @@ export function SponsorsSection() {
       description: 'Dijital diş hekimliği çözümleri ve yenilikçi teknolojiler',
       image: '/sponcored/gurkan-turkoz.png',
       website: 'www.dentaltech-global.com',
+      backgroundColor: 'black',
       highlight: 'Lider Teknoloji'
     },
     {
@@ -78,12 +80,14 @@ export function SponsorsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {sponsors.map((sponsor, index) => (
             <Card key={sponsor.name} className="h-full bg-white border-blue-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
-              <div className="relative">
-                <ImageWithFallback
-                  src={sponsor.image}
-                  alt={sponsor.name}
-                  className="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-500"
-                />
+              <div style={{backgroundColor:sponsor.backgroundColor}} className="relative">
+                <div className={`w-full h-48 flex items-center justify-center ${sponsor.image.includes('gurkan-turkoz.png') ? 'bg-black' : ''}`}>
+                  <ImageWithFallback
+                    src={sponsor.image}
+                    alt={sponsor.name}
+                    className="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               </div>

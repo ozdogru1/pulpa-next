@@ -80,15 +80,23 @@ export function RegistrationSection() {
       if (response.ok) {
         // Başarılı response'da ek bilgiler göster
         if (result.success && result.rowNumber) {
-          toast.success(`Kayıt başarılı! Satır: ${result.rowNumber}. Google Sheets'i kontrol edin.`, {
-            duration: 8000,
-            action: {
-              label: "Sheets'i Aç",
-              onClick: () => window.open(result.spreadsheetUrl, '_blank')
-            }
+          toast.success(`Kayıt başarılı! Ödeme sayfasına yönlendiriliyorsunuz...`, {
+            duration: 1500,
           });
+
+          // 3 saniye sonra ödeme sayfasına yönlendir
+          setTimeout(() => {
+            window.location.href = "https://dtpay.tr/tr/express/Pulpa-Academy";
+          }, 1500);
         } else {
-          toast.success("Kaydınız başarıyla Google Sheets tablosuna iletildi!");
+          toast.success("Kaydınız başarılı! Ödeme sayfasına yönlendiriliyorsunuz...", {
+            duration: 1500,
+          });
+
+          // 3 saniye sonra ödeme sayfasına yönlendir
+          setTimeout(() => {
+            window.location.href = "https://dtpay.tr/tr/express/Pulpa-Academy";
+          }, 3000);
         }
 
         // Formu temizle
@@ -303,7 +311,7 @@ export function RegistrationSection() {
                   >
                     {isSubmitting ? 'Kaydınız İşleniyor...' : 'Kayıt Ol '}
                   </Button>
-                  <div className='  cursor-pointer hover:bg-blue-700 text-blue-700'>
+                  <div className='text-center text-blue-700 text-sm mt-2'>
                     Kayıt oluşturulduktan sonra otomatik olarak ödeme sayfasına yönlendirileceksiniz
                   </div>
                 </form>
