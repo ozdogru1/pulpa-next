@@ -21,7 +21,7 @@ export function SpeakersSection() {
     { name: 'Nejat Nizam', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/prof.dr.nejat-nizam.jpeg' },
     { name: 'Ozan Seymen Sezen', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/prof.ozan-seymen-sezen.jpeg' },
     { name: 'Tuğba Türk', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/Tugba-Turk .JPG' },
-    { name: 'Hayriye Erturk', title: 'Uzm.Dt.', university: '', expertise: '', image: '/speakers-optimized/uzm.dt-hayriye-erturk.png' },
+    { name: 'Hayriye Ertürk', title: 'Uzm.Dt.', university: '', expertise: '', image: '/speakers-optimized/uzm.dt-hayriye-erturk.png' },
     { name: 'Büşra Sarı Ertek', title: 'Uzm.Psk.', university: '', expertise: '', image: '/speakers-optimized/uzm.psikolog-busra-sari-ertek.jpeg' },
     { name: 'WhatsApp Image 2025-09-20 at 13.29.56.jpeg', title: '', university: '', expertise: '', image: '/speakers-optimized/WhatsApp Image 2025-09-20 at 13.29.56.jpeg' },
   ];
@@ -65,15 +65,15 @@ export function SpeakersSection() {
                 </div>
                 <CardContent className="p-6">
                   <div className='flex items-center g-2'>
-                    <p className="text-blue-700 mr-2 font-medium mb-1">{speaker.title}</p>
+                    <p className="text-blue-900 mr-2 font-medium mb-1">{speaker.title}</p>
                     <h3 className="text-lg font-bold text-blue-900 mb-2">{speaker.name}</h3>
                   </div>
                   <p className="text-blue-600 text-sm mb-3">{speaker.university}</p>
-                  <div className="bg-blue-50 rounded-lg p-3">
+                  {/* <div className="bg-blue-50 rounded-lg p-3">
                     <p className="text-blue-800 font-medium text-sm">
                       Uzmanlık: {speaker.expertise}
                     </p>
-                  </div>
+                  </div> */}
                 </CardContent>
               </Card>
             </motion.div>

@@ -17,7 +17,7 @@ export function AboutSection() {
     {
       icon: Award,
       title: 'Sertifikalı Eğitim',
-      description: 'Katılım sertifikası ve sürekli mesleki gelişim kredileri',
+      description: 'Katılım sertifikası.',
     },
     {
       icon: Globe,
