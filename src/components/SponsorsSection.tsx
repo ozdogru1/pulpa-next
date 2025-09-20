@@ -77,8 +77,7 @@ export function SponsorsSection() {
         {/* Sponsors Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {sponsors.map((sponsor, index) => (
-
-            <Card className="h-full bg-white border-blue-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
+            <Card key={sponsor.name} className="h-full bg-white border-blue-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
               <div className="relative">
                 <ImageWithFallback
                   src={sponsor.image}

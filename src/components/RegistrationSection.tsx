@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
@@ -14,42 +14,123 @@ export function RegistrationSection() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
-    tc: '',
+    tckn: '',
     phone: '',
     paymentMethod: '',
-    invoiceAddress: '',
+    billingAddress: '',
     acceptTerms: false,
+    registrationDate: new Date().toLocaleString('tr-TR'),
+
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwQKb3pHnQ6VxGJMQDDS5qflcZCNEAJvNxotztfp4zu0gmh4DPnU9FWB8OVhH0d1skoog/exec'
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!formData.acceptTerms) {
-      toast.error('Lütfen kullanım koşullarını kabul edin.');
+      toast.error("Lütfen kullanım koşullarını kabul edin.");
       return;
     }
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    try {
+      // Apps Script ile uyumlu payload
+      const payload = {
+        firstName: formData.firstName,
+        lastName: formData.lastName,
+        tckn: formData.tckn,
+        phone: formData.phone,
+        paymentMethod: formData.paymentMethod,
+        billingAddress: formData.billingAddress,
+        registrationDate: new Date().toLocaleString("tr-TR"),
+      };
 
-    toast.success('Kaydınız başarıyla alındı! Detaylar e-posta adresinize gönderilecek.');
-    setIsSubmitting(false);
+      console.log('Gönderilen veri:', payload);
 
-    // Reset form
-    setFormData({
-      firstName: '',
-      lastName: '',
-      tc: '',
-      phone: '',
-      paymentMethod: '',
-      invoiceAddress: '',
-      acceptTerms: false,
-    });
+      let response;
+      let result;
+
+      try {
+        // İlk olarak JSON formatında dene
+        response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        });
+
+        console.log('JSON Response status:', response.status);
+        console.log('JSON Response headers:', Object.fromEntries(response.headers.entries()));
+      } catch (jsonError) {
+        console.log('JSON formatı başarısız, FormData ile deneniyor...');
+
+        // FormData oluştur
+        const fd = new FormData();
+        Object.entries(payload).forEach(([k, v]) =>
+          fd.append(k, String(v ?? ""))
+        );
+
+        // FormData ile tekrar dene
+        response = await fetch(GOOGLE_SCRIPT_URL, {
+          method: "POST",
+          body: fd,
+        });
+
+        console.log('FormData Response status:', response.status);
+        console.log('FormData Response headers:', Object.fromEntries(response.headers.entries()));
+      }
+
+      // Response tipini kontrol et
+      const contentType = response.headers.get('content-type');
+
+      if (contentType && contentType.includes('application/json')) {
+        result = await response.json();
+      } else {
+        result = await response.text();
+      }
+
+      console.log('Response result:', result);
+
+      if (response.ok) {
+        // Başarılı response'da ek bilgiler göster
+        if (result.success && result.rowNumber) {
+          toast.success(`Kayıt başarılı! Satır: ${result.rowNumber}. Google Sheets'i kontrol edin.`, {
+            duration: 8000,
+            action: {
+              label: "Sheets'i Aç",
+              onClick: () => window.open(result.spreadsheetUrl, '_blank')
+            }
+          });
+        } else {
+          toast.success("Kaydınız başarıyla Google Sheets tablosuna iletildi!");
+        }
+
+        // Formu temizle
+        setFormData({
+          firstName: "",
+          lastName: "",
+          tckn: "",
+          phone: "",
+          paymentMethod: "",
+          billingAddress: "",
+          acceptTerms: false,
+          registrationDate: new Date().toLocaleString('tr-TR'),
+        });
+      } else {
+        toast.error(`Kayıt gönderilemedi (${response.status}): ${JSON.stringify(result)}`);
+      }
+    } catch (err: any) {
+      console.error('Form submission error:', err);
+      toast.error("Bir hata oluştu: " + (err.message ?? err));
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   const registrationTypes = [
     { value: 'triple-room', label: 'Üç kişilik oda - 10.000 TL', discount: true },
@@ -59,7 +140,6 @@ export function RegistrationSection() {
   const paymentMethods: { value: string; label: string }[] = [
     { value: 'havale', label: 'Havale/EFT' },
     { value: 'kredi-karti', label: 'Kredi Kartı' },
-    { value: 'nakit', label: 'Nakit' },
   ];
 
   return (
@@ -171,17 +251,19 @@ export function RegistrationSection() {
                         value={formData.lastName}
                         onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                         required
+
                         className="mt-1"
                       />
                     </div>
                   </div>
                   <div>
-                    <Label htmlFor="tc">TC Kimlik No *</Label>
+                    <Label htmlFor="tckn">TC Kimlik No *</Label>
                     <Input
-                      id="tc"
-                      value={formData.tc}
-                      onChange={(e) => setFormData({ ...formData, tc: e.target.value })}
+                      id="tckn"
+                      value={formData.tckn}
+                      onChange={(e) => setFormData({ ...formData, tckn: e.target.value })}
                       required
+                      maxLength={11}
                       className="mt-1"
                     />
                   </div>
@@ -214,8 +296,8 @@ export function RegistrationSection() {
                     <Label htmlFor="invoiceAddress">Fatura Adresi *</Label>
                     <Textarea
                       id="invoiceAddress"
-                      value={formData.invoiceAddress}
-                      onChange={(e) => setFormData({ ...formData, invoiceAddress: e.target.value })}
+                      value={formData.billingAddress}
+                      onChange={(e) => setFormData({ ...formData, billingAddress: e.target.value })}
                       required
                       className="mt-1"
                       placeholder="Açık adresinizi giriniz"
@@ -235,10 +317,13 @@ export function RegistrationSection() {
                   <Button
                     type="submit"
                     disabled={isSubmitting || !formData.acceptTerms}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg"
+                    className="w-full bg-blue-600 cursor-pointer hover:bg-blue-700 text-white py-3 text-lg"
                   >
-                    {isSubmitting ? 'Kaydınız İşleniyor...' : 'Kayıt Ol'}
+                    {isSubmitting ? 'Kaydınız İşleniyor...' : 'Kayıt Ol '}
                   </Button>
+                  <div className='  cursor-pointer hover:bg-blue-700 text-blue-700'>
+                    Kayıt oluşturulduktan sonra otomatik olarak ödeme sayfasına yönlendirileceksiniz
+                  </div>
                 </form>
               </CardContent>
             </Card>
