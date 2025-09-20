@@ -4,48 +4,26 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function SpeakersSection() {
   const speakers = [
-    {
-      name: 'Prof. Dr. Mehmet Öztürk',
-      title: 'Oral ve Maksillofasiyal Cerrah',
-      university: 'İstanbul Üniversitesi',
-      expertise: 'Dijital İmplantoloji',
-      image: 'https://images.unsplash.com/photo-1659353888338-ce940a0f252f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtZWRpY2FsJTIwc3BlYWtlciUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3NTgwMDc4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    },
-    {
-      name: 'Dr. Sarah Johnson',
-      title: 'Endodontist',
-      university: 'Harvard School of Dental Medicine',
-      expertise: 'Mikroskobik Endodonti',
-      image: 'https://images.unsplash.com/photo-1659353888338-ce940a0f252f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtZWRpY2FsJTIwc3BlYWtlciUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3NTgwMDc4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    },
-    {
-      name: 'Prof. Dr. Elena Rodriguez',
-      title: 'Ortodontist',
-      university: 'Barcelona Üniversitesi',
-      expertise: 'Şeffaf Plak Tedavisi',
-      image: 'https://images.unsplash.com/photo-1659353888338-ce940a0f252f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtZWRpY2FsJTIwc3BlYWtlciUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3NTgwMDc4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    },
-    {
-      name: 'Dr. Kenji Tanaka',
-      title: 'Periodontoloji Uzmanı',
-      university: 'Tokyo Diş Hekimliği Üniversitesi',
-      expertise: 'Rejeneratif Periodontal Tedavi',
-      image: 'https://images.unsplash.com/photo-1659353888338-ce940a0f252f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtZWRpY2FsJTIwc3BlYWtlciUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3NTgwMDc4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    },
-    {
-      name: 'Prof. Dr. Ayşe Demir',
-      title: 'Protetik Diş Tedavisi Uzmanı',
-      university: 'Ankara Üniversitesi',
-      expertise: 'CAD/CAM Sistemleri',
-      image: 'https://images.unsplash.com/photo-1659353888338-ce940a0f252f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtZWRpY2FsJTIwc3BlYWtlciUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3NTgwMDc4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    },
-    {
-      name: 'Dr. Michael Smith',
-      title: 'Oral Patoloji Uzmanı',
-      university: 'Oxford Üniversitesi',
-      expertise: 'Oral Kanser Teşhisi',
-      image: 'https://images.unsplash.com/photo-1659353888338-ce940a0f252f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHxtZWRpY2FsJTIwc3BlYWtlciUyMHByZXNlbnRhdGlvbnxlbnwxfHx8fDE3NTgwMDc4NTN8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    },
+    { name: 'Berkin Öztürk', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/berkin-ozturk.png' },
+    { name: 'Önder Gürlek', title: 'Doç.Dr.', university: '', expertise: '', image: '/speakers-optimized/doç.dr.onder-gurlek.jpeg' },
+    { name: 'Volkan Çiftçi', title: 'Doç.Dr.', university: '', expertise: '', image: '/speakers-optimized/doç.dr.volkan-çiftçi.png' },
+    { name: 'Refka Rmili', title: 'Dt.', university: '', expertise: '', image: '/speakers-optimized/Dt.Refka Rmili.png' },
+    { name: 'Esra Uzer Çelik', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/Prof.Dr.Esra-Uzer-Celik.png' },
+    { name: 'Alp Abidin Ateşçi', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/Dr.Alp-abidin-atesci.jpeg' },
+    { name: 'Berna Özkeskin', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/dr.berna-ozkeskin.jpg' },
+    { name: 'Gökhan-Elmabaşoğlu', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/Dr.gokhan-elmabasoglu.png' },
+    { name: 'Merve Erdoğ', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/dr.merve-erdog.jpeg' },
+    { name: 'Özgur Baydemir', title: 'Dt.', university: '', expertise: '', image: '/speakers-optimized/dt-ozgur-baydemir.png' },
+    { name: 'Rouzbeh Fateli', title: 'Dt.', university: '', expertise: '', image: '/speakers-optimized/Dt. Rouzbeh-fateli.jpeg' },
+    { name: 'Erdoğan Ertek', title: 'Dt.', university: '', expertise: '', image: '/speakers-optimized/dt.erdogan-ertek.jpeg' },
+    { name: 'Gürkan Türköz.png', title: 'Cdt.', university: '', expertise: '', image: '/speakers-optimized/Gürkan-Türköz.png' },
+    { name: 'Buğra Kardaşlar', title: 'Op.Dr.', university: '', expertise: '', image: '/speakers-optimized/op.dr.bugra-kardaslar.jpeg' },
+    { name: 'Nejat Nizam', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/prof.dr.nejat-nizam.jpeg' },
+    { name: 'Ozan Seymen Sezen', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/prof.ozan-seymen-sezen.jpeg' },
+    { name: 'Tuğba Türk', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/Tugba-Turk .JPG' },
+    { name: 'Hayriye Erturk', title: 'Uzm.Dt.', university: '', expertise: '', image: '/speakers-optimized/uzm.dt-hayriye-erturk.png' },
+    { name: 'Büşra Sarı Ertek', title: 'Uzm.Psk.', university: '', expertise: '', image: '/speakers-optimized/uzm.psikolog-busra-sari-ertek.jpeg' },
+    { name: 'WhatsApp Image 2025-09-20 at 13.29.56.jpeg', title: '', university: '', expertise: '', image: '/speakers-optimized/WhatsApp Image 2025-09-20 at 13.29.56.jpeg' },
   ];
 
   return (
@@ -66,7 +44,7 @@ export function SpeakersSection() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {speakers.map((speaker, index) => (
             <motion.div
               key={index}
@@ -86,8 +64,10 @@ export function SpeakersSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-blue-900 mb-2">{speaker.name}</h3>
-                  <p className="text-blue-700 font-medium mb-1">{speaker.title}</p>
+                  <div className='flex items-center g-2'>
+                    <p className="text-blue-700 mr-2 font-medium mb-1">{speaker.title}</p>
+                    <h3 className="text-lg font-bold text-blue-900 mb-2">{speaker.name}</h3>
+                  </div>
                   <p className="text-blue-600 text-sm mb-3">{speaker.university}</p>
                   <div className="bg-blue-50 rounded-lg p-3">
                     <p className="text-blue-800 font-medium text-sm">
