@@ -50,42 +50,24 @@ export function RegistrationSection() {
 
       console.log('Gönderilen veri:', payload);
 
-      let response;
-      let result;
+      // FormData oluştur
+      const fd = new FormData();
+      Object.entries(payload).forEach(([k, v]) =>
+        fd.append(k, String(v ?? ""))
+      );
 
-      try {
-        // İlk olarak JSON formatında dene
-        response = await fetch(GOOGLE_SCRIPT_URL, {
-          method: "POST",
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(payload),
-        });
+      // FormData ile istek gönder
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        body: fd,
+      });
 
-        console.log('JSON Response status:', response.status);
-        console.log('JSON Response headers:', Object.fromEntries(response.headers.entries()));
-      } catch (jsonError) {
-        console.log('JSON formatı başarısız, FormData ile deneniyor...');
-
-        // FormData oluştur
-        const fd = new FormData();
-        Object.entries(payload).forEach(([k, v]) =>
-          fd.append(k, String(v ?? ""))
-        );
-
-        // FormData ile tekrar dene
-        response = await fetch(GOOGLE_SCRIPT_URL, {
-          method: "POST",
-          body: fd,
-        });
-
-        console.log('FormData Response status:', response.status);
-        console.log('FormData Response headers:', Object.fromEntries(response.headers.entries()));
-      }
+      console.log('Response status:', response.status);
+      console.log('Response headers:', Object.fromEntries(response.headers.entries()));
 
       // Response tipini kontrol et
       const contentType = response.headers.get('content-type');
+      let result;
 
       if (contentType && contentType.includes('application/json')) {
         result = await response.json();
