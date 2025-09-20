@@ -59,14 +59,15 @@ export function SpeakersSection() {
                   <ImageWithFallback
                     src={speaker.image}
                     alt={speaker.name}
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    style={{ objectFit: 'contain' }}
+                    className="w-full h-64 object-contain group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
                 </div>
                 <CardContent className="p-6">
                   <div className='flex items-center g-2'>
-                    <p className="text-blue-900 mr-2 font-medium mb-1">{speaker.title}</p>
-                    <h3 className="text-lg font-bold text-blue-900 mb-2">{speaker.name}</h3>
+                    <p className="text-blue-900 mr-2 font-medium ">{speaker.title}</p>
+                    <h3 className="text-lg font-bold text-blue-900 ">{speaker.name}</h3>
                   </div>
                   <p className="text-blue-600 text-sm mb-3">{speaker.university}</p>
                   {/* <div className="bg-blue-50 rounded-lg p-3">

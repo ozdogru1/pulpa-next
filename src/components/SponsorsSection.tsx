@@ -8,8 +8,7 @@ import { Star, Handshake, Building2, ExternalLink } from 'lucide-react';
 export function SponsorsSection() {
   const sponsors = [
     {
-      name: 'DentalTech Global',
-      description: 'Dijital diş hekimliği çözümleri ve yenilikçi teknolojiler',
+      name: 'Gürkan Türköz Dental Studio',
       image: '/sponcored/gurkan-turkoz.png',
       website: 'www.dentaltech-global.com',
       backgroundColor: 'black',
@@ -17,16 +16,14 @@ export function SponsorsSection() {
       highlight: 'Lider Teknoloji'
     },
     {
-      name: 'MediEquip Solutions',
-      description: 'Diş hekimliği ekipman ve cihazları',
+      name: 'i-Linq ',
       image: '/sponcored/i-linq.png',
       website: 'www.mediequip.com',
       backgroundColor: 'white',
       highlight: 'Premium Ekipman'
     },
     {
-      name: 'BioPharm Healthcare',
-      description: 'Dental farmasötik ürünleri ve ilaçları',
+      name: 'Saremco',
       image: '/sponcored/SAREMCO.png',
       website: 'www.biopharm.com',
       backgroundColor: 'white',
@@ -34,7 +31,6 @@ export function SponsorsSection() {
     },
     {
       name: 'Smile Design',
-      description: 'Estetik diş hekimliği çözümleri',
       image: '/sponcored/smile-design.PNG',
       website: 'www.smiledesign.com',
       backgroundColor: 'white',
@@ -42,7 +38,6 @@ export function SponsorsSection() {
     },
     {
       name: 'SmileBot',
-      description: 'Yapay zeka destekli gülüş tasarımı',
       image: '/sponcored/smilebot.JPEG',
       website: 'www.smilebot.com',
       backgroundColor: 'white',
@@ -50,7 +45,6 @@ export function SponsorsSection() {
     },
     {
       name: 'Tolard',
-      description: 'Dental malzeme ve ürünler',
       image: '/sponcored/tolard.png',
       website: 'www.tolard.com',
       backgroundColor: 'white',
@@ -86,13 +80,12 @@ export function SponsorsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {sponsors.map((sponsor, index) => (
             <Card key={sponsor.name} className="h-full bg-white border-blue-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
-              <div style={{backgroundColor:sponsor.backgroundColor}} className="relative">
+              <div style={{ backgroundColor: sponsor.backgroundColor }} className="relative">
                 <div className={`w-full h-48 flex items-center justify-center ${sponsor.backgroundColor ? 'bg-black' : 'bg-gray-50'}`}>
                   <ImageWithFallback
                     src={sponsor.image}
-                    style={{padding:sponsor.padding}}
                     alt={sponsor.name}
-                    className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -100,7 +93,7 @@ export function SponsorsSection() {
 
               <CardContent className="p-6">
                 <div className="text-center">
-                  <h4 className="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">
+                  <h4 className="text-xl font-bold text-blue-900   group-hover:text-blue-700 transition-colors duration-300">
                     {sponsor.name}
                   </h4>
                   <p className="text-blue-700 text-sm leading-relaxed mb-4">
