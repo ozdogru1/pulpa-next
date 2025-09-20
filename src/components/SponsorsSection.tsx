@@ -13,6 +13,7 @@ export function SponsorsSection() {
       image: '/sponcored/gurkan-turkoz.png',
       website: 'www.dentaltech-global.com',
       backgroundColor: 'black',
+      padding: '80px',
       highlight: 'Lider Teknoloji'
     },
     {
@@ -20,6 +21,7 @@ export function SponsorsSection() {
       description: 'Diş hekimliği ekipman ve cihazları',
       image: '/sponcored/i-linq.png',
       website: 'www.mediequip.com',
+      backgroundColor: 'white',
       highlight: 'Premium Ekipman'
     },
     {
@@ -27,6 +29,7 @@ export function SponsorsSection() {
       description: 'Dental farmasötik ürünleri ve ilaçları',
       image: '/sponcored/SAREMCO.png',
       website: 'www.biopharm.com',
+      backgroundColor: 'white',
       highlight: 'Kaliteli Ürünler'
     },
     {
@@ -34,6 +37,7 @@ export function SponsorsSection() {
       description: 'Estetik diş hekimliği çözümleri',
       image: '/sponcored/smile-design.PNG',
       website: 'www.smiledesign.com',
+      backgroundColor: 'white',
       highlight: 'Estetik Çözümler'
     },
     {
@@ -41,6 +45,7 @@ export function SponsorsSection() {
       description: 'Yapay zeka destekli gülüş tasarımı',
       image: '/sponcored/smilebot.JPEG',
       website: 'www.smilebot.com',
+      backgroundColor: 'white',
       highlight: 'AI Gülüş Tasarımı'
     },
     {
@@ -48,6 +53,7 @@ export function SponsorsSection() {
       description: 'Dental malzeme ve ürünler',
       image: '/sponcored/tolard.png',
       website: 'www.tolard.com',
+      backgroundColor: 'white',
       highlight: 'Malzeme Çözümleri'
     }
   ];
@@ -81,15 +87,15 @@ export function SponsorsSection() {
           {sponsors.map((sponsor, index) => (
             <Card key={sponsor.name} className="h-full bg-white border-blue-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
               <div style={{backgroundColor:sponsor.backgroundColor}} className="relative">
-                <div className={`w-full h-48 flex items-center justify-center ${sponsor.image.includes('gurkan-turkoz.png') ? 'bg-black' : ''}`}>
+                <div className={`w-full h-48 flex items-center justify-center ${sponsor.backgroundColor ? 'bg-black' : 'bg-gray-50'}`}>
                   <ImageWithFallback
                     src={sponsor.image}
+                    style={{padding:sponsor.padding}}
                     alt={sponsor.name}
-                    className="w-full h-48 object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
               </div>
 
               <CardContent className="p-6">
