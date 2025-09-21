@@ -22,7 +22,29 @@ export function Header() {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = 80; // Fixed header height
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - headerHeight;
+
+      // Custom smooth scroll animation
+      const startPosition = window.pageYOffset;
+      const distance = offsetPosition - startPosition;
+      const duration = 1000; // 1 second
+      let start: number | null = null;
+
+      function easeOutQuart(t: number): number {
+        return 1 - (--t) * t * t * t;
+      }
+
+      function animation(currentTime: number) {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - (start || 0);
+        const run = easeOutQuart(timeElapsed / duration) * distance + startPosition;
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation);
+      }
+
+      requestAnimationFrame(animation);
       setIsMenuOpen(false); // Close mobile menu after navigation
     }
   };
