@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Textarea } from './ui/textarea';
 import { Checkbox } from './ui/checkbox';
 import { toast } from 'sonner';
-import { Check, User, Mail, Phone, MapPin, Calendar } from 'lucide-react';
+import { Check, User, Mail, Phone, MapPin, Calendar, CreditCard, PhoneCall, PhoneIcon, Copy, CheckCircle } from 'lucide-react';
 
 export function RegistrationSection() {
   const [formData, setFormData] = useState({
@@ -24,8 +24,22 @@ export function RegistrationSection() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [copiedIban, setCopiedIban] = useState(false);
 
   const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwQKb3pHnQ6VxGJMQDDS5qflcZCNEAJvNxotztfp4zu0gmh4DPnU9FWB8OVhH0d1skoog/exec'
+
+  const copyIbanToClipboard = async () => {
+    const iban = 'TR68 0006 2000 0010 0006 8757 25';
+    const numbersOnly = iban.replace('TR', '').replace(/\s/g, ''); // Remove TR prefix and spaces
+    try {
+      await navigator.clipboard.writeText(numbersOnly);
+      setCopiedIban(true);
+      toast.success('IBAN numarası kopyalandı!');
+      setTimeout(() => setCopiedIban(false), 2000);
+    } catch (err) {
+      toast.error('Kopyalama başarısız oldu');
+    }
+  };
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -311,6 +325,20 @@ export function RegistrationSection() {
                   >
                     {isSubmitting ? 'Kaydınız İşleniyor...' : 'Kayıt Ol '}
                   </Button>
+                  <div className='flex flex-col lg:flex-row lg:items-center gap-4 text-blue-700 text-sm mt-2'>
+                    <a href="tel:+905527045615" className="flex items-center gap-2 text-white-300 underline">
+                    <PhoneIcon className="w-5 h-5"/>  +90 552 704 56 15
+                    </a>
+                    <span className='flex items-center gap-2'>
+                        <User className="w-5 h-5"/>
+                    <p>Yunus Emre Diköz</p>
+                    </span>
+                    <span className='flex items-center gap-2 cursor-pointer hover:bg-blue-800 p-2 rounded transition-colors' onClick={copyIbanToClipboard}>
+                      {copiedIban ? <CheckCircle className="w-5 h-5 text-green-400"/> : <CreditCard className="w-5 h-5"/>}
+                      TR68 0006 2000 0010 0006 8757 25
+                    </span>
+                    <span className='text-blue-700 '>İbanı kopyalamak için üzerine tıklayınız</span>
+                  </div>
                   <div className='text-center text-blue-700 text-sm mt-2'>
                     Kayıt oluşturulduktan sonra otomatik olarak ödeme sayfasına yönlendirileceksiniz
                   </div>
