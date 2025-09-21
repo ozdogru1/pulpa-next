@@ -9,14 +9,14 @@ export function SponsorsSection() {
   const sponsors = [
     {
       name: 'Gürkan Türköz Dental Studio',
-      image: '/sponcored/gurkan-turkoz.png',
+       image: '/sponcored/gurkan-turkoz.png',
       website: 'www.dentaltech-global.com',
       backgroundColor: 'black',
-      padding: '80px',
+      padding: '10px',
       highlight: 'Lider Teknoloji'
     },
     {
-      name: 'i-Linq ',
+      name: 'i-linq',
       image: '/sponcored/i-linq.png',
       website: 'www.mediequip.com',
       backgroundColor: 'white',
@@ -24,7 +24,7 @@ export function SponsorsSection() {
     },
     {
       name: 'Saremco',
-      image: '/sponcored/SAREMCO.png',
+       image: '/sponcored/SAREMCO.png',
       website: 'www.biopharm.com',
       backgroundColor: 'white',
       highlight: 'Kaliteli Ürünler'
@@ -38,6 +38,7 @@ export function SponsorsSection() {
     },
     {
       name: 'SmileBot',
+      description: 'Yapay zeka destekli gülüş tasarımı',
       image: '/sponcored/smilebot.JPEG',
       website: 'www.smilebot.com',
       backgroundColor: 'white',
@@ -45,6 +46,7 @@ export function SponsorsSection() {
     },
     {
       name: 'Tolard',
+      description: 'Dental malzeme ve ürünler',
       image: '/sponcored/tolard.png',
       website: 'www.tolard.com',
       backgroundColor: 'white',
@@ -80,10 +82,11 @@ export function SponsorsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {sponsors.map((sponsor, index) => (
             <Card key={sponsor.name} className="h-full bg-white border-blue-100 hover:shadow-2xl transition-all duration-300 overflow-hidden">
-              <div style={{ backgroundColor: sponsor.backgroundColor }} className="relative">
+              <div style={{backgroundColor:sponsor.backgroundColor}} className="relative">
                 <div className={`w-full h-48 flex items-center justify-center ${sponsor.backgroundColor ? 'bg-black' : 'bg-gray-50'}`}>
                   <ImageWithFallback
                     src={sponsor.image}
+                    style={{padding:sponsor.padding}}
                     alt={sponsor.name}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                   />
@@ -93,10 +96,12 @@ export function SponsorsSection() {
 
               <CardContent className="p-6">
                 <div className="text-center">
-                  <h4 className="text-xl font-bold text-blue-900   group-hover:text-blue-700 transition-colors duration-300">
+                  <h4 className="text-xl font-bold text-blue-900 mb-2 group-hover:text-blue-700 transition-colors duration-300">
                     {sponsor.name}
                   </h4>
-
+                  <p className="text-blue-700 text-sm leading-relaxed mb-4">
+                    {sponsor.description}
+                  </p>
 
                   {/* Decorative Element */}
                   <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto rounded-full group-hover:w-24 transition-all duration-300"></div>

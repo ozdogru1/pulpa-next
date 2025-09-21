@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Button } from './ui/button';
 
@@ -35,6 +36,7 @@ export function Header() {
               { label: 'Konuşmacılar', id: 'speakers' },
               { label: 'Program', id: 'program' },
               { label: 'Konum', id: 'location' },
+              { label: 'Sosyal Etkinlikler', id: 'social-activities' },
               { label: 'Sponsorlar', id: 'sponsors' },
             ].map((item) => (
               <button

@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, Globe, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
@@ -100,7 +101,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <p className="text-blue-200">
-                © Pulpa Akademi Tüm hakları saklıdır.
+                © PulpaAcademy Tüm hakları saklıdır.
               </p>
             </div>
             <div className="flex space-x-6">

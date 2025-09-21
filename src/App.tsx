@@ -1,3 +1,4 @@
+import React from 'react';
 import { Toaster } from './components/ui/sonner';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
@@ -8,6 +9,7 @@ import { LocationSection } from './components/LocationSection';
 import { SponsorsSection } from './components/SponsorsSection';
 import { RegistrationSection } from './components/RegistrationSection';
 import { Footer } from './components/Footer';
+import { SocialActivitiesSection } from './components/SocialActivitiesSection';
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
         <SpeakersSection />
         <ProgramSection />
         <LocationSection />
+        <SocialActivitiesSection />
         <SponsorsSection />
         <RegistrationSection />
       </main>
