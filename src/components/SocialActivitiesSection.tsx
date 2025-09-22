@@ -18,7 +18,7 @@ export function SocialActivitiesSection() {
       image: './social-events/second-day-social.jpg',
     },
     {
-      title: 'Çeşme Kültür Turu',
+      title: 'Cunda Kültür Turu',
       date: '12 Ekim 2025',
       description: "Sempozyumun son günü, işin pratiğine ayrılıyor. Katılımcılar, gerçekçi klinik senaryolara uygun olarak hazırlanan modeller üzerinde uygulamalar yapıyor. Bilginin ele, elin pratiğe dönüştüğü o büyülü anlar yaşanıyor. Aynı anda, uygulama bölümüne katılmayanlar için açık hava amfide PulpaTalk başlıyor. Doğayla iç içe, sade ama derin sohbetlerle, hekimlik yolculuğunun farklı yüzleri konuşuluyor. Birlikte düşünmek, paylaşmak ve ilham almak için mükemmel bir alan… Ve tabii ki, su sporları yine sahnede! İster gün doğumuyla başla, ister öğle saatlerinde serinle… SUP, kano, kürek — doğanın içinde, bedenini özgürleştirme zamanı.",
       image: './social-events/third-day-social.jpg',
@@ -111,14 +111,14 @@ export function SocialActivitiesSection() {
                   <Users className="w-8 h-8 text-blue-600" />
                 </div>
                 <h4 className="font-bold text-blue-900 mb-2">Networking</h4>
-                <p className="text-blue-700 text-sm">500+ profesyonel ile tanışma fırsatı</p>
+                <p className="text-blue-700 text-sm">100+ profesyonel ile tanışma fırsatı</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <MapPin className="w-8 h-8 text-green-600" />
                 </div>
                 <h4 className="font-bold text-blue-900 mb-2">Keşif</h4>
-                <p className="text-blue-700 text-sm">Çeşme'nin güzelliklerini keşfedin</p>
+                <p className="text-blue-700 text-sm">Cunda'nın güzelliklerini keşfedin</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">

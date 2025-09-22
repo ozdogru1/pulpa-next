@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Card, CardContent } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -8,7 +9,7 @@ export function LocationSection() {
     {
       icon: Hotel,
       title: 'Konaklama',
-      description: 'Çeşme\'nin en prestijli otellerinde özel kongressciler indirimi',
+      description: 'Cundanın en prestijli otellerinden birinde özel kongre indirimi',
     },
     {
       icon: Utensils,
@@ -18,7 +19,7 @@ export function LocationSection() {
     {
       icon: Camera,
       title: 'Turizm',
-      description: 'Tarihi Çeşme Kalesi ve doğal güzellikler',
+      description: 'Cunda Adasının doğal güzellikleri',
     },
     {
       icon: Waves,
