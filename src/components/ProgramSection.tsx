@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
@@ -86,6 +87,7 @@ export function ProgramSection() {
         },
       ],
       practical: [
+
         {
           title: 'İmplantolojinin Temelleri',
           subTitle: `Standart implantoloji kavramları`,
@@ -97,24 +99,25 @@ export function ProgramSection() {
           title: 'Yetersiz Vertikal Kemik Yüksekliği Vakalarında İmplantoloji',
           subTitle: `Klinik değerlendirme ve planlama`,
           subTitle2: "Cerrahi yaklaşımlar ve pratik uygulamalar",
-          speaker: 'Dr. Sarah Johnson & Prof. Dr. Elena Rodriguez',
+          speaker: 'Uzm. Dt. Rouzbeh Fazeli',
           type: 'workshop',
         },
         {
           title: 'Yetersiz Horizontal Kemik Kalınlığı Vakalarında İmplantoloji',
           subTitle: `Tedavi stratejileri`,
           subTitle2: "Uygulamalı cerrahi teknikler",
-          speaker: 'Dr. Sarah Johnson & Prof. Dr. Elena Rodriguez',
+          speaker: 'Uzm. Dt. Rouzbeh Fazeli',
           type: 'workshop',
         },
         {
           title: 'Basitleştirilmiş İmplantoloji Yaklaşımı',
-          subTitle: `Tedavi stratejileri`,
-          subTitle2: "Uygulamalı cerrahi teknikler",
-          speaker: '',
+          subTitle: `Günlük Pratiğe Kolay Entegrasyon`,
+          subTitle2: "Komplikasyonların önlenmesi ve yöntemi",
+          speaker: 'Uzm. Dt. Rouzbeh Fazeli',
           type: 'workshop',
         },
       ],
+      praticalSubTitle:"Pratik oturum kontenjanı 12 kişidir. Kayıt gereklidir."
     },
     {
       date: '17 Ekim 2025',
@@ -184,6 +187,7 @@ export function ProgramSection() {
           subTitle2: 'Muayenehane koşullarında travma yönetiminde ilk adımlar',
           subTitle3: 'En sık görülen dental travma tipleri (avülsiyon, luksasyon, komplike kron kırıkları vb.)',
           subTitle4: 'Hızlı karar algoritmaları',
+          speaker:"Doç. Dr. Volkan Çiftçi",
           type: 'workshop',
         },
         {
@@ -193,6 +197,7 @@ export function ProgramSection() {
           subTitle3: 'Canlı demonstrasyon:',
           subTitle4: 'Diş modeli üzerinde splint uygulama',
           subTitle5: 'Yapıştırma teknikleri ve dikkat edilmesi gereken noktalar',
+          speaker:"Doç. Dr. Volkan Çiftçi",
           type: 'workshop',
         },
         {
@@ -200,6 +205,7 @@ export function ProgramSection() {
           subTitle1: 'Takip randevusu planlama',
           subTitle2: 'Travma sonrası iyileşme takibi',
           subTitle3: 'Radyografik ve klinik değerlendirme protokolleri',
+          speaker:"Doç.Dr. Volkan Çiftçi",
           type: 'workshop',
         },
         {
@@ -207,6 +213,7 @@ export function ProgramSection() {
           subTitle1: 'Pulp nekrozu, kök rezorpsiyonu ve renk değişikliği gibi komplikasyonlar',
           subTitle2: 'Müdahale seçenekleri ve zamanlaması',
           subTitle3: 'Örnek vaka üzerinden komplikasyon yönetimi tartışması',
+          speaker:"Doç.Dr. Volkan Çiftçi",
           type: 'workshop',
         },
         {
@@ -214,6 +221,7 @@ export function ProgramSection() {
           subTitle1: 'Katılımcıların küçük gruplara ayrılarak vaka çözümlemesi',
           subTitle2: 'Travma tipine göre tedavi planı hazırlama',
           subTitle3: 'Eğitmen eşliğinde değerlendirme ve geri bildirim',
+          speaker:"Doç.Dr. Volkan Çiftçi",
           type: 'workshop',
         },
 
@@ -335,6 +343,7 @@ export function ProgramSection() {
                         </div>
                         <h3 className="text-2xl font-bold text-blue-900">Pratik Oturumlar & Workshoplar</h3>
                       </div>
+                        <div className=' text-blue-800'>{day.praticalSubTitle}</div>
                       {day.practical.map((session, index) => (
                         <motion.div
                           key={`practical-${index}`}
