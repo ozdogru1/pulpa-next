@@ -10,7 +10,7 @@ export function Header() {
   // Check if screen is mobile on mount and resize
   React.useEffect(() => {
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 900);
     };
     
     checkIsMobile();
@@ -18,6 +18,7 @@ export function Header() {
     
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
+console.log(isMobile, ": ismobile");
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -77,10 +78,11 @@ export function Header() {
              className="flex items-center space-x-2"
              whileHover={{ scale: 1.05 }}
            >
-             <div
-               style={{ backgroundImage: "url('/pulpa-logo.png')", backgroundSize: "cover", backgroundPosition: "center" }}
-               className="w-[200px] h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-             </div>
+             <img
+             src='/pulpa-logo.png'
+               style={{  width:"200px", height:"auto", objectFit:"contain", backgroundSize: "cover", backgroundPosition: "center" }}
+               className=" rounded-lg flex items-center justify-center"
+             />
            </motion.div>
 
            {/* Desktop Navigation - Hidden on mobile, visible on tablet and desktop */}
@@ -94,7 +96,9 @@ export function Header() {
                  >
                    {item.label}
                  </button>
+                 
                ))}
+               
              </nav>
            )}
 

@@ -102,9 +102,7 @@ export function SocialActivitiesSection() {
             <h3 className="text-2xl font-bold text-blue-900 mb-4">
               Tüm Sosyal Etkinlikler Kongre Kaydınıza Dahildir
             </h3>
-            <p className="text-blue-700 mb-6">
-              Sosyal etkinliklere katılım için ayrı bir ücret bulunmamaktadır. 
-             </p>
+          
             <div className="flex justify-between gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">

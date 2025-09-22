@@ -32,7 +32,7 @@ export function ProgramSection() {
         {
           time: '09:30 - 10:00',
           title: 'Kayıt & Karşılama',
-          type: 'presentation',
+          type: 'keynote',
         },
         {
           time: '10:00 - 10:40 ',
