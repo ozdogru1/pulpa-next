@@ -33,7 +33,7 @@ export function SponsorsSection() {
       name: 'Smile Design',
       image: '/sponcored/smile-design.PNG',
       website: 'www.smiledesign.com',
-      backgroundColor: 'white',
+      backgroundColor: ' #0040FF',
       highlight: 'Estetik Çözümler'
     },
     {
@@ -91,9 +91,9 @@ export function SponsorsSection() {
                 <div className={`w-full h-48 flex items-center justify-center ${sponsor.backgroundColor ? 'bg-black' : 'bg-gray-50'}`}>
                   <ImageWithFallback
                     src={sponsor.image}
-                    style={{padding:sponsor.padding}}
+                    style={{padding:sponsor.padding, backgroundColor:sponsor.backgroundColor, objectFit:"contain"}}
                     alt={sponsor.name}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full   group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
