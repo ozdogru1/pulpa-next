@@ -51,7 +51,7 @@ export function SponsorsSection() {
       highlight: 'Malzeme Çözümleri'
     },
     {
-      name: 'İgci',
+      name: 'GC',
        image: '/sponcored/name.jpeg',
       website: 'www.tolard.com',
       backgroundColor: 'white',

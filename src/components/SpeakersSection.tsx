@@ -1,29 +1,30 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Card, CardContent } from './ui/card';
 import { ImageWithFallback } from './figma/ImageWithFallback';
 
 export function SpeakersSection() {
   const speakers = [
-    { name: 'Berkin Öztürk', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/berkin-ozturk.png' },
+    { name: 'Tuğba Türk', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/Tugba-Turk .JPG' },
+    { name: 'Nejat Nizam', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/prof.dr.nejat-nizam.jpeg' },
     { name: 'Önder Gürlek', title: 'Doç.Dr.', university: '', expertise: '', image: '/speakers-optimized/doç.dr.onder-gurlek.jpeg' },
+    { name: 'Alp Abidin Ateşçi', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/Dr.Alp-abidin-atesci.jpeg' },
+    { name: 'Merve Erdoğ', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/dr.merve-erdog.jpeg' },
     { name: 'Volkan Çiftçi', title: 'Doç.Dr.', university: '', expertise: '', image: '/speakers-optimized/doç.dr.volkan-çiftçi.png' },
     { name: 'Refka Rmili', title: 'Dt.', university: '', expertise: '', image: '/speakers-optimized/Dt.Refka Rmili.png' },
     { name: 'Esra Uzer Çelik', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/Prof.Dr.Esra-Uzer-Celik.png' },
-    { name: 'Alp Abidin Ateşçi', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/Dr.Alp-abidin-atesci.jpeg' },
+    { name: 'Berkin Öztürk', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/berkin-ozturk.png' },
     { name: 'Berna Özkeskin', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/dr.berna-ozkeskin.jpg' },
     { name: 'Gökhan-Elmabaşoğlu', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/Dr.gokhan-elmabasoglu.png' },
-    { name: 'Merve Erdoğ', title: 'Dr.', university: '', expertise: '', image: '/speakers-optimized/dr.merve-erdog.jpeg' },
     { name: 'Özgur Baydemir', title: 'Dt.', university: '', expertise: '', image: '/speakers-optimized/dt-ozgur-baydemir.png' },
     { name: 'Rouzbeh Fateli', title: 'Dt.', university: '', expertise: '', image: '/speakers-optimized/Dt. Rouzbeh-fateli.jpeg' },
     { name: 'Erdoğan Ertek', title: 'Dt.', university: '', expertise: '', image: '/speakers-optimized/dt.erdogan-ertek.jpeg' },
-    { name: 'Gürkan Türköz.png', title: 'Cdt.', university: '', expertise: '', image: '/speakers-optimized/Gürkan-Türköz.png' },
     { name: 'Buğra Kardaşlar', title: 'Op.Dr.', university: '', expertise: '', image: '/speakers-optimized/op.dr.bugra-kardaslar.jpeg' },
-    { name: 'Nejat Nizam', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/prof.dr.nejat-nizam.jpeg' },
     { name: 'Ozan Seymen Sezen', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/prof.ozan-seymen-sezen.jpeg' },
-    { name: 'Tuğba Türk', title: 'Prof.Dr.', university: '', expertise: '', image: '/speakers-optimized/Tugba-Turk .JPG' },
     { name: 'Hayriye Ertürk', title: 'Uzm.Dt.', university: '', expertise: '', image: '/speakers-optimized/uzm.dt-hayriye-erturk.png' },
     { name: 'Büşra Sarı Ertek', title: 'Uzm.Psk.', university: '', expertise: '', image: '/speakers-optimized/uzm.psikolog-busra-sari-ertek.jpeg' },
-    { name: 'WhatsApp Image 2025-09-20 at 13.29.56.jpeg', title: '', university: '', expertise: '', image: '/speakers-optimized/WhatsApp Image 2025-09-20 at 13.29.56.jpeg' },
+    { name: 'Gürkan Türköz', title: 'Cdt.', university: '', expertise: '', image: '/speakers-optimized/Gürkan-Türköz.png' },
+    { name: 'Eren Aydoğan', title: 'Cdt.', university: '', expertise: '', image: '/speakers-optimized/WhatsApp Image 2025-09-20 at 13.29.56.jpeg' },
   ];
 
   return (

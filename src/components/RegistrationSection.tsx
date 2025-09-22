@@ -19,15 +19,15 @@ export function RegistrationSection() {
     paymentMethod: '',
     billingAddress: '',
     acceptTerms: false,
+    practicalTraining: false,
     registrationDate: new Date().toLocaleString('tr-TR'),
 
   });
-
+ 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [copiedIban, setCopiedIban] = useState(false);
 
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwQKb3pHnQ6VxGJMQDDS5qflcZCNEAJvNxotztfp4zu0gmh4DPnU9FWB8OVhH0d1skoog/exec'
-
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyGW8gI-WRAyA-WUAJ8BqOE9k2R2MCwt850Jc5seHBaIyJlmPJOrWI9A6uJSVwHIVbtvg/exec'
   const copyIbanToClipboard = async () => {
     const iban = 'TR68 0006 2000 0010 0006 8757 25';
     const numbersOnly = iban.replace('TR', '').replace(/\s/g, ''); // Remove TR prefix and spaces
@@ -59,6 +59,7 @@ export function RegistrationSection() {
         phone: formData.phone,
         paymentMethod: formData.paymentMethod,
         billingAddress: formData.billingAddress,
+        practicalTraining: formData.practicalTraining ? 'Evet' : 'Hayır',
         registrationDate: new Date().toLocaleString("tr-TR"),
       };
 
@@ -122,6 +123,7 @@ export function RegistrationSection() {
           paymentMethod: "",
           billingAddress: "",
           acceptTerms: false,
+          practicalTraining: false,
           registrationDate: new Date().toLocaleString('tr-TR'),
         });
       } else {
@@ -137,6 +139,7 @@ export function RegistrationSection() {
 
 
   const registrationTypes = [
+    { value: 'no-room', label: 'Sadece akademik oturumlara erişim (Konaklamasız) 8.000 TL', discount: true },
     { value: 'triple-room', label: 'Üç kişilik oda - 10.000 TL', discount: true },
     { value: 'double-room', label: 'İki kişilik oda - 14.000 TL', discount: true },
     { value: 'single-room', label: 'Tek kişilik oda - 18.000 TL', discount: true },
@@ -210,10 +213,10 @@ export function RegistrationSection() {
                   <ul className="text-sm space-y-1 text-blue-100">
                     <li>• Tüm oturumlara katılım</li>
                     <li>• Kahve ve çay servisleri</li>
-                    <li>• Öğle yemekleri</li>
+                    <li>• Sabah Kahvaltısı, Öğle ve Akşam yemekleri</li>
                     <li>• Kongre materyalleri</li>
                     <li>• Sertifika</li>
-                    <li>• Networking kokteyli</li>
+                    <li>• Networking alanı</li>
                   </ul>
                 </div>
               </CardContent>

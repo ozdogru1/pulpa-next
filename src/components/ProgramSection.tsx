@@ -7,7 +7,7 @@ import { Clock, MapPin, User } from 'lucide-react';
 export function ProgramSection() {
   const programDays = [
     {
-      date: '15 Ekim 2025',
+      date: '10 Ekim 2025',
       day: 'day1',
       theoretical: [
         {
@@ -26,7 +26,7 @@ export function ProgramSection() {
       ]
     },
     {
-      date: '16 Ekim 2025',
+      date: '11 Ekim 2025',
       day: 'day2',
       theoretical: [
         {
@@ -87,51 +87,49 @@ export function ProgramSection() {
         },
       ],
       practical: [
-
         {
-          title: 'İmplantolojinin Temelleri',
-          subTitle: `Standart implantoloji kavramları`,
-          subTitle2: "İmplantolojide biyoloji ve temel prensipler",
-          speaker: 'Uzm. Dt. Rouzbeh Fazeli',
+          title: 'Diş Hekimliğinde Botulinum Toksin',
+          speaker:"Op.Dr.Buğra Kardaşlar",
           type: 'workshop',
         },
         {
-          title: 'Yetersiz Vertikal Kemik Yüksekliği Vakalarında İmplantoloji',
-          subTitle: `Klinik değerlendirme ve planlama`,
-          subTitle2: "Cerrahi yaklaşımlar ve pratik uygulamalar",
-          speaker: 'Uzm. Dt. Rouzbeh Fazeli',
+          title: 'Kompozit Venerlerde Tbakalama Sanatı',
+          speaker:"Dt. Reka Rmili",
           type: 'workshop',
         },
         {
-          title: 'Yetersiz Horizontal Kemik Kalınlığı Vakalarında İmplantoloji',
-          subTitle: `Tedavi stratejileri`,
-          subTitle2: "Uygulamalı cerrahi teknikler",
-          speaker: 'Uzm. Dt. Rouzbeh Fazeli',
+          title: 'Klinikte Dijital Tasarım',
+          speaker:"Cdt. Gürkan Türköz",
           type: 'workshop',
         },
         {
-          title: 'Basitleştirilmiş İmplantoloji Yaklaşımı',
-          subTitle: `Günlük Pratiğe Kolay Entegrasyon`,
-          subTitle2: "Komplikasyonların önlenmesi ve yöntemi",
-          speaker: 'Uzm. Dt. Rouzbeh Fazeli',
+          title: 'Klinikte Dijital Tasarım',
+          speaker:"Cdt. Gürkan Türköz",
           type: 'workshop',
         },
+      
       ],
       praticalSubTitle:"Pratik oturum kontenjanı 12 kişidir. Kayıt gereklidir."
     },
     {
-      date: '17 Ekim 2025',
+      date: '12 Ekim 2025',
       day: 'day3',
       theoretical: [
         {
           time: '09:30 - 10:00',
           title: 'Kayıt & Karşılama',
-          type: 'presentation',
+          type: 'keynot',
         },
         {
           time: '10:00 - 10:40',
-          title: 'Diş Hekimliğinde Botulinum Toksin',
-          speaker: 'Prof. Dr. Ozan Seymen Sezen',
+          title: 'Diş Hekimliğinde Psikolojik Yaklaşım',
+          speaker: 'Uzm. Psk. Büşra Sarı Ertek',
+          type: 'presentation',
+        },
+        {
+          time: '10:40 - 11:20',
+          title: 'Dijital Gülüş Tasarımı ve Yapay Zeka',
+          speaker: 'Dt. Erdoğan Ertek',
           type: 'presentation',
         },
         {
@@ -139,16 +137,18 @@ export function ProgramSection() {
           title: 'Kahve Arası',
           type: 'presentation',
         },
+       
         {
           time: '11:40 - 12:20',
-          title: 'Direct Composite Veneer',
-          speaker: 'Dr. Berna Özkeskin',
+          title: 'Diş Hekimliğinde Botulinum Toksin',
+          speaker: 'Prof. Dr. Ozan Seymen Sezen',
           type: 'presentation',
         },
+        
         {
           time: '12:20 - 13:00',
-          title: 'Kişiselleştirilmiş Gülüş Tasarımı',
-          speaker: 'Dr. Berkin Öztürk',
+          title: 'Direct Composite Veneer',
+          speaker: 'Dr. Berna Özkeskin',
           type: 'presentation',
         },
         {
@@ -158,73 +158,48 @@ export function ProgramSection() {
         },
         {
           time: '14:30 - 15:10',
+          title: 'Kişiselleştirilmiş Gülüş Tasarımı',
+          speaker: 'Dr. Berkin Öztürk',
+          type: 'presentation',
+        },
+        {
+          time: '15:10 - 15:50',
+          title: 'Kapanış & Sertifika Töreni',
+          type: 'presentation',
+        },
+        {
+          time: '15:50 - 16:30',
           title: 'Endodontide Teknoloji ve Endokron Uyumu',
           speaker: 'Uzm. Dt. Hayriye Ertürk',
           type: 'presentation',
         },
         {
-          time: '15:10 - 15:50',
-          title: 'Diş Hekimliğinde Psikolojik Yaklaşım',
-          speaker: 'Uzm. Psk. Büşra Sarı Ertek',
-          type: 'presentation',
-        },
-        {
-          time: '15:50 - 16:30',
-          title: 'Dijital Gülüş Tasarımı ve Yapay Zeka',
-          speaker: 'Dt. Erdoğan Ertek',
-          type: 'presentation',
-        },
-        {
-          time: '16:30 - 16:45',
+          time: '16-30 - 16:45',
           title: 'Kapanış & Sertifika Töreni',
-          type: 'presentation',
+          type: 'closing',
         },
       ],
       practical: [
         {
-          title: 'Giriş ve Klinik Yaklaşımlar',
-          subTitle1: 'Dental travmanın çocuk diş hekimliğinde önemi',
-          subTitle2: 'Muayenehane koşullarında travma yönetiminde ilk adımlar',
-          subTitle3: 'En sık görülen dental travma tipleri (avülsiyon, luksasyon, komplike kron kırıkları vb.)',
-          subTitle4: 'Hızlı karar algoritmaları',
+          title: 'Diş Hekimliğinde Botulinum Toksin',
+          speaker:"Dr. Gökhan Elmabaşoğlu",
+          type: 'workshop',
+        },
+        {
+          title: 'Çocuk Diş Hekimliğinde Muayenehane Pratiğinde Dental Travma',
           speaker:"Doç. Dr. Volkan Çiftçi",
           type: 'workshop',
         },
         {
-          title: 'Uygulamalı Splint Hazırlama',
-          subTitle1: 'Splint tiplerinin tanıtımı (esnek vs. rijit)',
-          subTitle2: 'Klinik ortamda splint hazırlama için gerekli malzemelerin tanıtımı',
-          subTitle3: 'Canlı demonstrasyon:',
-          subTitle4: 'Diş modeli üzerinde splint uygulama',
-          subTitle5: 'Yapıştırma teknikleri ve dikkat edilmesi gereken noktalar',
-          speaker:"Doç. Dr. Volkan Çiftçi",
+          title: 'Direkt Kompozit Venerlerde Öngörülebilir Başarı için İleri Teknikler',
+          speaker:"Prof. Dr. Esra Uzer Çelik",
           type: 'workshop',
         },
         {
-          title: 'Hasta Takip Prosedürleri',
-          subTitle1: 'Takip randevusu planlama',
-          subTitle2: 'Travma sonrası iyileşme takibi',
-          subTitle3: 'Radyografik ve klinik değerlendirme protokolleri',
-          speaker:"Doç.Dr. Volkan Çiftçi",
+          title: 'Basitleştirilmiş İmplantoloji',
+          speaker:"Uzm. Dt. Rouzbeh Fazeli",
           type: 'workshop',
         },
-        {
-          title: 'Komplikasyon Yönetimi',
-          subTitle1: 'Pulp nekrozu, kök rezorpsiyonu ve renk değişikliği gibi komplikasyonlar',
-          subTitle2: 'Müdahale seçenekleri ve zamanlaması',
-          subTitle3: 'Örnek vaka üzerinden komplikasyon yönetimi tartışması',
-          speaker:"Doç.Dr. Volkan Çiftçi",
-          type: 'workshop',
-        },
-        {
-          title: 'Uygulamalı Vaka Çalışması ve Soru-Cevap',
-          subTitle1: 'Katılımcıların küçük gruplara ayrılarak vaka çözümlemesi',
-          subTitle2: 'Travma tipine göre tedavi planı hazırlama',
-          subTitle3: 'Eğitmen eşliğinde değerlendirme ve geri bildirim',
-          speaker:"Doç.Dr. Volkan Çiftçi",
-          type: 'workshop',
-        },
-
       ],
 
     },
@@ -367,36 +342,7 @@ export function ProgramSection() {
                                   <h3 className="text-xl font-bold text-blue-900 mb-2">
                                     {session.title}
                                   </h3>
-                                  {'subTitle' in session && session.subTitle && (
-                                    <div className="text-blue-800 whitespace-pre-line mb-1 text-base">
-                                      {session.subTitle}
-                                    </div>
-                                  )}
-                                  {'subTitle1' in session && session.subTitle1 && (
-                                    <div className="text-blue-800 whitespace-pre-line mb-1 text-base">
-                                      {session.subTitle1}
-                                    </div>
-                                  )}
-                                  {'subTitle2' in session && session.subTitle2 && (
-                                    <div className="text-blue-800 whitespace-pre-line mb-1 text-base">
-                                      {session.subTitle2}
-                                    </div>
-                                  )}
-                                  {'subTitle3' in session && session.subTitle3 && (
-                                    <div className="text-blue-800 whitespace-pre-line mb-1 text-base">
-                                      {session.subTitle3}
-                                    </div>
-                                  )}
-                                  {'subTitle4' in session && session.subTitle4 && (
-                                    <div className="text-blue-800 whitespace-pre-line mb-1 text-base">
-                                      {session.subTitle4}
-                                    </div>
-                                  )}
-                                  {'subTitle5' in session && session.subTitle5 && (
-                                    <div className="text-blue-800 whitespace-pre-line mb-2 text-base">
-                                      {session.subTitle5}
-                                    </div>
-                                  )}
+                      
                                   {'speaker' in session && session.speaker && (
                                     <div className="flex items-center text-blue-700">
                                       <User className="w-4 h-4 mr-2" />
