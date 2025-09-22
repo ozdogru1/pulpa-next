@@ -21,7 +21,6 @@ export function RegistrationSection() {
     acceptTerms: false,
     practicalTraining: false,
     registrationDate: new Date().toLocaleString('tr-TR'),
-
   });
  
   const [isSubmitting, setIsSubmitting] = useState(false);

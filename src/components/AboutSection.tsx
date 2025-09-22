@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion } from 'motion/react';
 import { Card, CardContent } from './ui/card';
 import { Target, Users, Award, Globe } from 'lucide-react';
@@ -121,7 +122,7 @@ export function AboutSection() {
               <h4 className="text-2xl font-bold mb-4">Kongre İstatistikleri</h4>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center">
-                  <div className="text-3xl font-bold">15</div>
+                  <div className="text-3xl font-bold">20</div>
                   <div className="text-blue-100">Konuşmacı</div>
                 </div>
                 <div className="text-center">
