@@ -58,6 +58,6 @@ export default defineConfig({
     open: true,
   },
   preview: {
-    allowedHosts: ["pulpasempozyum.com/"],
+    allowedHosts: ['pulpasempozyum.com'],
   },
 });
