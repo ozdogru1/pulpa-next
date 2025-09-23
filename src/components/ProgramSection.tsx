@@ -11,8 +11,15 @@ export function ProgramSection() {
       day: 'day1',
       theoretical: [
         {
-          title: 'Kongre Açılış Konuşması',
-          speaker: '',
+          title: 'Ayvalık, Cunda Küçükköy / Sarımsaklı (Serbest Zaman)',
+          time: "16.00",
+          type: 'keynote',
+        },
+        {
+          title: 'Açıkhava Amfitiyatroda Açılış Konuşması',
+          speaker: 'Ayvalık İlçe Sağlık Müdürü Dr. Saliha Baltacı Akgün',
+          speaker2: 'Kongre Onursal Başkanı Prof. Dr. Tuğba Türk',
+          speaker3: "PulpAcademy Kurucusu Emre Diköz",
           type: 'keynote',
         },
         {
@@ -36,8 +43,8 @@ export function ProgramSection() {
         },
         {
           time: '10:00 - 10:40 ',
-          title: 'Yumuşak Doku Cerrahisinde Biyoloji Temelli Flep Dizayni',
-          speaker: 'Prof. Dr. Nejat Nizam',
+          title: ' Bruksizm Tedavisinde Dijitalleşme ',
+          speaker: 'Dt. Özgür Baydemir',
           type: 'presentation',
         },
         {
@@ -53,14 +60,14 @@ export function ProgramSection() {
         },
         {
           time: '11:40 - 12:20',
-          title: ' Estetik Bölgede Planlamadan Proteze Dijital Destekli Implant Uygulamaları',
-          speaker: 'Doc. Dr. Önder Gürlek',
+          title: 'Yumuşak Doku Cerrahisinde Biyoloji Temelli Flep Dizayni',
+          speaker: 'Prof. Dr. Nejat Nizam',
           type: 'presentation',
         },
         {
           time: '12:20 - 13:00',
-          title: ' Dijital Anestezi Uygulamalari',
-          speaker: 'Dr. Alp Abidin Ateşçi',
+          title: ' Estetik Bölgede Planlamadan Proteze Dijital Destekli Implant Uygulamaları',
+          speaker: 'Doc. Dr. Önder Gürlek',
           type: 'presentation',
         },
         {
@@ -76,8 +83,8 @@ export function ProgramSection() {
         },
         {
           time: '15:10 - 15:50',
-          title: ' Bruksizm Tedavisinde Dijitalleşme ',
-          speaker: 'Dt. Özgür Baydemir',
+          title: ' Dijital Anestezi Uygulamalari',
+          speaker: 'Dr. Alp Abidin Ateşçi',
           type: 'presentation',
         },
         {
@@ -89,27 +96,27 @@ export function ProgramSection() {
       practical: [
         {
           title: 'Diş Hekimliğinde Botulinum Toksin',
-          speaker:"Op.Dr.Buğra Kardaşlar",
+          speaker: "Op.Dr.Buğra Kardaşlar",
           type: 'workshop',
         },
         {
           title: 'Kompozit Venerlerde Tbakalama Sanatı',
-          speaker:"Dt. Reka Rmili",
+          speaker: "Dt. Reka Rmili",
           type: 'workshop',
         },
         {
           title: 'Klinikte Dijital Tasarım',
-          speaker:"Cdt. Gürkan Türköz",
+          speaker: "Cdt. Gürkan Türköz",
           type: 'workshop',
         },
         {
           title: 'Klinikte Dijital Tasarım',
-          speaker:"Cdt. Gürkan Türköz",
+          speaker: "Cdt. Eren Aydoğan",
           type: 'workshop',
         },
-      
+
       ],
-      praticalSubTitle:"Pratik oturum kontenjanı 12 kişidir. Kayıt gereklidir."
+      praticalSubTitle: "Pratik oturum kontenjanı 12 kişidir. Kayıt gereklidir."
     },
     {
       date: '12 Ekim 2025',
@@ -137,14 +144,14 @@ export function ProgramSection() {
           title: 'Kahve Arası',
           type: 'presentation',
         },
-       
+
         {
           time: '11:40 - 12:20',
           title: 'Diş Hekimliğinde Botulinum Toksin',
           speaker: 'Prof. Dr. Ozan Seymen Sezen',
           type: 'presentation',
         },
-        
+
         {
           time: '12:20 - 13:00',
           title: 'Direct Composite Veneer',
@@ -182,22 +189,22 @@ export function ProgramSection() {
       practical: [
         {
           title: 'Diş Hekimliğinde Botulinum Toksin',
-          speaker:"Dr. Gökhan Elmabaşoğlu",
+          speaker: "Dr. Gökhan Elmabaşoğlu",
           type: 'workshop',
         },
         {
           title: 'Çocuk Diş Hekimliğinde Muayenehane Pratiğinde Dental Travma',
-          speaker:"Doç. Dr. Volkan Çiftçi",
+          speaker: "Doç. Dr. Volkan Çiftçi",
           type: 'workshop',
         },
         {
           title: 'Direkt Kompozit Venerlerde Öngörülebilir Başarı için İleri Teknikler',
-          speaker:"Prof. Dr. Esra Uzer Çelik",
+          speaker: "Prof. Dr. Esra Uzer Çelik",
           type: 'workshop',
         },
         {
           title: 'Basitleştirilmiş İmplantoloji',
-          speaker:"Uzm. Dt. Rouzbeh Fazeli",
+          speaker: "Uzm. Dt. Rouzbeh Fazeli",
           type: 'workshop',
         },
       ],
@@ -301,6 +308,18 @@ export function ProgramSection() {
                                     <span>{session.speaker}</span>
                                   </div>
                                 )}
+                                {'speaker2' in session && session.speaker2 && (
+                                  <div className="flex items-center text-blue-700">
+                                    <User className="w-4 h-4 mr-2" />
+                                    <span>{session.speaker2}</span>
+                                  </div>
+                                )}
+                                {'speaker3' in session && session.speaker3 && (
+                                  <div className="flex items-center text-blue-700">
+                                    <User className="w-4 h-4 mr-2" />
+                                    <span>{session.speaker3}</span>
+                                  </div>
+                                )}
                               </div>
                             </div>
                           </CardContent>
@@ -318,7 +337,7 @@ export function ProgramSection() {
                         </div>
                         <h3 className="text-2xl font-bold text-blue-900">Pratik Oturumlar & Workshoplar</h3>
                       </div>
-                        <div className=' text-blue-800'>{day.praticalSubTitle}</div>
+                      <div className=' text-blue-800'>{day.praticalSubTitle}</div>
                       {day.practical.map((session, index) => (
                         <motion.div
                           key={`practical-${index}`}
@@ -342,7 +361,7 @@ export function ProgramSection() {
                                   <h3 className="text-xl font-bold text-blue-900 mb-2">
                                     {session.title}
                                   </h3>
-                      
+
                                   {'speaker' in session && session.speaker && (
                                     <div className="flex items-center text-blue-700">
                                       <User className="w-4 h-4 mr-2" />
