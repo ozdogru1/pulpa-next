@@ -138,7 +138,7 @@ export function RegistrationSection() {
 
 
   const registrationTypes = [
-    { value: 'no-room', label: 'Sadece akademik oturumlara erişim (Konaklamasız) 8.000 TL', discount: true },
+    { value: 'no-room', label: 'Tüm teorik oturumlara erişim (Konaklamasız) 8.000 TL', discount: true },
     { value: 'triple-room', label: 'Üç kişilik oda - 10.000 TL', discount: true },
     { value: 'double-room', label: 'İki kişilik oda - 14.000 TL', discount: true },
     { value: 'single-room', label: 'Tek kişilik oda - 18.000 TL', discount: true },
@@ -210,7 +210,7 @@ export function RegistrationSection() {
                 <div className="mt-6 p-4 bg-blue-600 text-white rounded-lg">
                   <h4 className="font-bold mb-2">Kayıt Dahil Olanlar:</h4>
                   <ul className="text-sm space-y-1 text-blue-100">
-                    <li>• Tüm oturumlara katılım</li>
+                    <li>• Tüm teorik oturumlara katılım</li>
                     <li>• Kahve ve çay servisleri</li>
                     <li>• Sabah Kahvaltısı, Öğle ve Akşam yemekleri</li>
                     <li>• Kongre materyalleri</li>
