@@ -40,7 +40,7 @@ export function AboutSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-blue-900 mb-6">
             Kongre Hakkında
           </h2>
-          <p className="text-xl text-blue-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-blue-700   leading-relaxed">
             Pulpa Akademi tarafından düzenlenen bu özel kongre, diş hekimleri ve diş hekimliği öğrencilerini, bilimsel içeriği yüksek ve deneyim odaklı bir programla buluşturuyor.
 
             Cunda Adası'nın eşsiz atmosferinde gerçekleşecek olan etkinlikte, teorik ve pratik eğitimlerin yanı sıra interaktif paneller, soru-cevap oturumları ve birebir iletişim fırsatları sunulacak. Sektörün en saygın isimleriyle dolu konuşmacı kadrosu, katılımcılara hem mesleki gelişim hem de ilham dolu bir yaz deneyimi vadediyor.

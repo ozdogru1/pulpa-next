@@ -9,19 +9,19 @@ export function SocialActivitiesSection() {
     {
       date: '10 Ekim 2025',
       description: "Valizler açılıyor, kalpler heyecanla çarpıyor… Cunda'nın ruhunu taşıyan taş sokaklardan geçip otelimize yerleşiyoruz.Ve akşamüstü, Türkiye'de bir ilk gerçekleşiyor: Açık havada, gün batımında, unutulmaz bir açılış konuşması. Ege'nin turuncuya boyanan ufkunda, Pulpa'nın vizyonu gökyüzüne karışıyor.Ardından kumsala geçiyoruz… Ateş başında marshmallow'lar çubuklara takılıyor, samimi sohbetler yankılanıyor, yeni dostlukların kıvılcımı çakıyor. Yıldızların altında, Pulpa ruhu ilk geceye damgasını vuruyor.",
-      image: './social-events/first-day-cunda.jpg',
-     },
+      image: '/src/assets/social-events/first-day-cunda.jpg',
+    },
     {
       title: 'Networking Kokteyli',
       date: '11 Ekim 2025',
       description: "Sabah saatleri bilgiyle dolu.Alanında uzman eğitmenlerle gerçekleştirilen akademik sunumlar, katılımcılarını düşünmeye, sorgulamaya ve gelişmeye davet ediyor. Ve ardından, sahne eğlencenin oluyor! Havuz başı partisiyle adanın ritmi değişiyor. Bando ekibiyle coşku yükseliyor, canlı DJ performansıyla gecenin ritmi hızlanıyor. Bu sırada gün boyunca ve isteyenler için sabahın erken saatlerinde bile SUP, kano ve kürek gibi su sporları katılımcıları bekliyor. Eğitim kadar hareket, eğlence kadar özgürlük… Pulpa'da bir güne sığan şey sadece bilgi değil; yaşanmışlık.",
-      image: './social-events/second-day-social.jpg',
+      image: '/src/assets/social-events/second-day-social.jpg',
     },
     {
       title: 'Cunda Kültür Turu',
       date: '12 Ekim 2025',
       description: "Sempozyumun son günü, işin pratiğine ayrılıyor. Katılımcılar, gerçekçi klinik senaryolara uygun olarak hazırlanan modeller üzerinde uygulamalar yapıyor. Bilginin ele, elin pratiğe dönüştüğü o büyülü anlar yaşanıyor. Aynı anda, uygulama bölümüne katılmayanlar için açık hava amfide PulpaTalk başlıyor. Doğayla iç içe, sade ama derin sohbetlerle, hekimlik yolculuğunun farklı yüzleri konuşuluyor. Birlikte düşünmek, paylaşmak ve ilham almak için mükemmel bir alan… Ve tabii ki, su sporları yine sahnede! İster gün doğumuyla başla, ister öğle saatlerinde serinle… SUP, kano, kürek — doğanın içinde, bedenini özgürleştirme zamanı.",
-      image: './social-events/third-day-social.jpg',
+      image: '/src/assets/social-events/third-day-social.jpg',
     }
   ];
 
@@ -51,7 +51,7 @@ export function SocialActivitiesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
-              whileHover={{ 
+              whileHover={{
                 y: -10,
                 scale: 1.02,
                 transition: { duration: 0.3, ease: "easeOut" }
@@ -65,14 +65,14 @@ export function SocialActivitiesSection() {
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/70 via-transparent to-transparent opacity-60"></div>
-                  
+
                   <div className="absolute bottom-4 left-4 right-4">
                     <h3 className="text-2xl font-bold text-white mb-2">
                       {activity.title}
                     </h3>
                   </div>
                 </div>
-                
+
                 <CardContent className="p-6">
                   <div className="space-y-3 mb-4">
                     <div className="flex items-center text-blue-800">
@@ -80,11 +80,11 @@ export function SocialActivitiesSection() {
                       <span className="font-medium">{activity.date}</span>
                     </div>
                   </div>
-                  
+
                   <p className="text-blue-800 leading-relaxed">
                     {activity.description}
                   </p>
-                  
+
                 </CardContent>
               </Card>
             </motion.div>
@@ -102,7 +102,7 @@ export function SocialActivitiesSection() {
             <h3 className="text-2xl font-bold text-blue-900 mb-4">
               Tüm Sosyal Etkinlikler Kongre Kaydınıza Dahildir
             </h3>
-          
+
             <div className="flex justify-between gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">

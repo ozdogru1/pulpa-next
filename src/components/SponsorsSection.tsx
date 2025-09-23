@@ -9,7 +9,7 @@ export function SponsorsSection() {
   const sponsors = [
     {
       name: 'Gürkan Türköz Dental Studio',
-      image: '/sponcored/gurkan-turkoz.png',
+      image: '/src/assets/sponcored/gurkan-turkoz.png',
       website: 'www.dentaltech-global.com',
       backgroundColor: 'black',
       padding: '10px',
@@ -17,42 +17,42 @@ export function SponsorsSection() {
     },
     {
       name: 'i-linq',
-      image: '/sponcored/i-linq.png',
+      image: '/src/assets/sponcored/i-linq.png',
       website: 'www.mediequip.com',
       backgroundColor: 'white',
       highlight: 'Premium Ekipman'
     },
     {
       name: 'Saremco',
-      image: '/sponcored/SAREMCO.png',
+      image: '/src/assets/sponcored/SAREMCO.png',
       website: 'www.biopharm.com',
       backgroundColor: 'white',
       highlight: 'Kaliteli Ürünler'
     },
     {
       name: 'Smile Design',
-      image: '/sponcored/smile-design.PNG',
+      image: '/src/assets/sponcored/smile-design.PNG',
       website: 'www.smiledesign.com',
       backgroundColor: ' #0040FF',
       highlight: 'Estetik Çözümler'
     },
     {
       name: 'SmileBot',
-      image: '/sponcored/smilebot.JPEG',
+      image: '/src/assets/sponcored/smilebot.JPEG',
       website: 'www.smilebot.com',
       backgroundColor: 'white',
       highlight: 'AI Gülüş Tasarımı'
     },
     {
       name: 'Tolard',
-      image: '/sponcored/tolard.png',
+      image: '/src/assets/sponcored/tolard.png',
       website: 'www.tolard.com',
       backgroundColor: 'white',
       highlight: 'Malzeme Çözümleri'
     },
     {
       name: 'GC',
-      image: '/sponcored/name.jpeg',
+      image: '/src/assets/sponcored/name.jpeg',
       website: 'www.tolard.com',
       backgroundColor: 'white',
       highlight: 'Malzeme Çözümleri'
