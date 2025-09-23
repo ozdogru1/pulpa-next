@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Clock, MapPin, User } from 'lucide-react';
+import { time } from 'console';
 
 export function ProgramSection() {
   const programDays = [
@@ -20,11 +21,14 @@ export function ProgramSection() {
           speaker: 'Ayvalık İlçe Sağlık Müdürü Dr. Saliha Baltacı Akgün',
           speaker2: 'Kongre Onursal Başkanı Prof. Dr. Tuğba Türk',
           speaker3: "PulpAcademy Kurucusu Emre Diköz",
+          time: "18.00",
           type: 'keynote',
         },
         {
           title: 'Cunda Sahilinde Gün Batımında Marshmallow Barbekü',
           type: 'keynote',
+          time: "19.00",
+
         },
         {
           title: 'Serbest Zaman',
