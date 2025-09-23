@@ -9,19 +9,19 @@ export function SocialActivitiesSection() {
     {
       date: '10 Ekim 2025',
       description: "Valizler açılıyor, kalpler heyecanla çarpıyor… Cunda'nın ruhunu taşıyan taş sokaklardan geçip otelimize yerleşiyoruz.Ve akşamüstü, Türkiye'de bir ilk gerçekleşiyor: Açık havada, gün batımında, unutulmaz bir açılış konuşması. Ege'nin turuncuya boyanan ufkunda, Pulpa'nın vizyonu gökyüzüne karışıyor.Ardından kumsala geçiyoruz… Ateş başında marshmallow'lar çubuklara takılıyor, samimi sohbetler yankılanıyor, yeni dostlukların kıvılcımı çakıyor. Yıldızların altında, Pulpa ruhu ilk geceye damgasını vuruyor.",
-      image: '/src/assets/social-events/first-day-cunda.jpg',
+      image: '/assets/social-events/first-day-cunda.jpg',
     },
     {
       title: 'Networking Kokteyli',
       date: '11 Ekim 2025',
       description: "Sabah saatleri bilgiyle dolu.Alanında uzman eğitmenlerle gerçekleştirilen akademik sunumlar, katılımcılarını düşünmeye, sorgulamaya ve gelişmeye davet ediyor. Ve ardından, sahne eğlencenin oluyor! Havuz başı partisiyle adanın ritmi değişiyor. Bando ekibiyle coşku yükseliyor, canlı DJ performansıyla gecenin ritmi hızlanıyor. Bu sırada gün boyunca ve isteyenler için sabahın erken saatlerinde bile SUP, kano ve kürek gibi su sporları katılımcıları bekliyor. Eğitim kadar hareket, eğlence kadar özgürlük… Pulpa'da bir güne sığan şey sadece bilgi değil; yaşanmışlık.",
-      image: '/src/assets/social-events/second-day-social.jpg',
+      image: '/assets/social-events/second-day-social.jpg',
     },
     {
       title: 'Cunda Kültür Turu',
       date: '12 Ekim 2025',
       description: "Sempozyumun son günü, işin pratiğine ayrılıyor. Katılımcılar, gerçekçi klinik senaryolara uygun olarak hazırlanan modeller üzerinde uygulamalar yapıyor. Bilginin ele, elin pratiğe dönüştüğü o büyülü anlar yaşanıyor. Aynı anda, uygulama bölümüne katılmayanlar için açık hava amfide PulpaTalk başlıyor. Doğayla iç içe, sade ama derin sohbetlerle, hekimlik yolculuğunun farklı yüzleri konuşuluyor. Birlikte düşünmek, paylaşmak ve ilham almak için mükemmel bir alan… Ve tabii ki, su sporları yine sahnede! İster gün doğumuyla başla, ister öğle saatlerinde serinle… SUP, kano, kürek — doğanın içinde, bedenini özgürleştirme zamanı.",
-      image: '/src/assets/social-events/third-day-social.jpg',
+      image: '/assets/social-events/third-day-social.jpg',
     }
   ];
 

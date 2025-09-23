@@ -10,33 +10,33 @@ export function SpeakersSection() {
     const checkIsMobile = () => {
       setIsMobile(window.innerWidth < 900);
     };
-    
+
     checkIsMobile();
     window.addEventListener('resize', checkIsMobile);
-    
+
     return () => window.removeEventListener('resize', checkIsMobile);
   }, []);
   const speakers = [
-    { name: 'Tuğba Türk', title: 'Prof.Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/Tugba-Turk .JPG' },
-    { name: 'Nejat Nizam', title: 'Prof.Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/prof.dr.nejat-nizam.jpeg' },
-    { name: 'Önder Gürlek', title: 'Doç.Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/doç.dr.onder-gurlek.jpeg' },
-    { name: 'Alp Abidin Ateşçi', title: 'Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/Dr.Alp-abidin-atesci.jpeg' },
-    { name: 'Merve Erdoğ', title: 'Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/dr.merve-erdog.jpeg' },
-    { name: 'Volkan Çiftçi', title: 'Doç.Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/doç.dr.volkan-çiftçi.png' },
-    { name: 'Refka Rmili', title: 'Dt.', university: '', expertise: '', image: '/src/assets/speakers-optimized/Dt.Refka Rmili.png' },
-    { name: 'Esra Uzer Çelik', title: 'Prof.Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/Prof.Dr.Esra-Uzer-Celik.png' },
-    { name: 'Berkin Öztürk', title: 'Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/berkin-ozturk.png' },
-    { name: 'Berna Özkeskin', title: 'Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/dr.berna-ozkeskin.jpg' },
-    { name: 'Gökhan-Elmabaşoğlu', title: 'Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/Dr.gokhan-elmabasoglu.png' },
-    { name: 'Özgur Baydemir', title: 'Dt.', university: '', expertise: '', image: '/src/assets/speakers-optimized/dt-ozgur-baydemir.png' },
-    { name: 'Rouzbeh Fateli', title: 'Dt.', university: '', expertise: '', image: '/src/assets/speakers-optimized/Dt. Rouzbeh-fateli.jpeg' },
-    { name: 'Erdoğan Ertek', title: 'Dt.', university: '', expertise: '', image: '/src/assets/speakers-optimized/dt.erdogan-ertek.jpeg' },
-    { name: 'Buğra Kardaşlar', title: 'Op.Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/op.dr.bugra-kardaslar.jpeg' },
-    { name: 'Ozan Seymen Sezen', title: 'Prof.Dr.', university: '', expertise: '', image: '/src/assets/speakers-optimized/prof.ozan-seymen-sezen.jpeg' },
-    { name: 'Hayriye Ertürk', title: 'Uzm.Dt.', university: '', expertise: '', image: '/src/assets/speakers-optimized/uzm.dt-hayriye-erturk.png' },
-    { name: 'Büşra Sarı Ertek', title: 'Uzm.Psk.', university: '', expertise: '', image: '/src/assets/speakers-optimized/uzm.psikolog-busra-sari-ertek.jpeg' },
-    { name: 'Gürkan Türköz', title: 'Cdt.', university: '', expertise: '', image: '/src/assets/speakers-optimized/Gürkan-Türköz.png' },
-    { name: 'Eren Aydoğan', title: 'Cdt.', university: '', expertise: '', image: '/src/assets/speakers-optimized/WhatsApp Image 2025-09-20 at 13.29.56.jpeg' },
+    { name: 'Tuğba Türk', title: 'Prof.Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/Tugba-Turk .JPG' },
+    { name: 'Nejat Nizam', title: 'Prof.Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/prof.dr.nejat-nizam.jpeg' },
+    { name: 'Önder Gürlek', title: 'Doç.Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/doç.dr.onder-gurlek.jpeg' },
+    { name: 'Alp Abidin Ateşçi', title: 'Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/Dr.Alp-abidin-atesci.jpeg' },
+    { name: 'Merve Erdoğ', title: 'Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/dr.merve-erdog.jpeg' },
+    { name: 'Volkan Çiftçi', title: 'Doç.Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/doç.dr.volkan-çiftçi.png' },
+    { name: 'Refka Rmili', title: 'Dt.', university: '', expertise: '', image: '/assets/speakers-optimized/Dt.Refka Rmili.png' },
+    { name: 'Esra Uzer Çelik', title: 'Prof.Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/Prof.Dr.Esra-Uzer-Celik.png' },
+    { name: 'Berkin Öztürk', title: 'Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/berkin-ozturk.png' },
+    { name: 'Berna Özkeskin', title: 'Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/dr.berna-ozkeskin.jpg' },
+    { name: 'Gökhan-Elmabaşoğlu', title: 'Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/Dr.gokhan-elmabasoglu.png' },
+    { name: 'Özgur Baydemir', title: 'Dt.', university: '', expertise: '', image: '/assets/speakers-optimized/dt-ozgur-baydemir.png' },
+    { name: 'Rouzbeh Fateli', title: 'Dt.', university: '', expertise: '', image: '/assets/speakers-optimized/Dt. Rouzbeh-fateli.jpeg' },
+    { name: 'Erdoğan Ertek', title: 'Dt.', university: '', expertise: '', image: '/assets/speakers-optimized/dt.erdogan-ertek.jpeg' },
+    { name: 'Buğra Kardaşlar', title: 'Op.Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/op.dr.bugra-kardaslar.jpeg' },
+    { name: 'Ozan Seymen Sezen', title: 'Prof.Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/prof.ozan-seymen-sezen.jpeg' },
+    { name: 'Hayriye Ertürk', title: 'Uzm.Dt.', university: '', expertise: '', image: '/assets/speakers-optimized/uzm.dt-hayriye-erturk.png' },
+    { name: 'Büşra Sarı Ertek', title: 'Uzm.Psk.', university: '', expertise: '', image: '/assets/speakers-optimized/uzm.psikolog-busra-sari-ertek.jpeg' },
+    { name: 'Gürkan Türköz', title: 'Cdt.', university: '', expertise: '', image: '/assets/speakers-optimized/Gürkan-Türköz.png' },
+    { name: 'Eren Aydoğan', title: 'Cdt.', university: '', expertise: '', image: '/assets/speakers-optimized/WhatsApp Image 2025-09-20 at 13.29.56.jpeg' },
   ];
 
   return (
@@ -72,7 +72,7 @@ export function SpeakersSection() {
                   <ImageWithFallback
                     src={speaker.image}
                     alt={speaker.name}
-                    style={{ objectFit: isMobile ? "contain" :'cover' }}
+                    style={{ objectFit: 'contain' }}
                     className="w-full h-64   group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
