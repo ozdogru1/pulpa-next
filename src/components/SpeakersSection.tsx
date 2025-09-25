@@ -28,7 +28,7 @@ export function SpeakersSection() {
     { name: 'Berkin Öztürk', title: 'Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/berkin-ozturk.png' },
     { name: 'Berna Özkeskin', title: 'Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/dr.berna-ozkeskin.jpg' },
     { name: 'Gökhan-Elmabaşoğlu', title: 'Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/Dr.gokhan-elmabasoglu.png' },
-    { name: 'Özgur Baydemir', title: 'Dt.', university: '', expertise: '', image: '/assets/speakers-optimized/dt-ozgur-baydemir.png' },
+    { name: 'Özgür Baydemir', title: 'Dt.', university: '', expertise: '', image: '/assets/speakers-optimized/dt-ozgur-baydemir.png' },
     { name: 'Rouzbeh Fateli', title: 'Dt.', university: '', expertise: '', image: '/assets/speakers-optimized/Dt. Rouzbeh-fateli.jpeg' },
     { name: 'Erdoğan Ertek', title: 'Dt.', university: '', expertise: '', image: '/assets/speakers-optimized/dt.erdogan-ertek.jpeg' },
     { name: 'Buğra Kardaşlar', title: 'Op.Dr.', university: '', expertise: '', image: '/assets/speakers-optimized/op.dr.bugra-kardaslar.jpeg' },

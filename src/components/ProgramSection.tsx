@@ -28,7 +28,6 @@ export function ProgramSection() {
           title: 'Cunda Sahilinde Gün Batımında Marshmallow Barbekü',
           type: 'keynote',
           time: "19.00",
-
         },
         {
           title: 'Serbest Zaman',
@@ -40,6 +39,11 @@ export function ProgramSection() {
       date: '11 Ekim 2025',
       day: 'day2',
       theoretical: [
+        {
+          time: '07:30 - 09:30',
+          title: 'Su Sporları & Yoga',
+          type: 'social',
+        },
         {
           time: '09:30 - 10:00',
           title: 'Kayıt & Karşılama',
@@ -99,16 +103,6 @@ export function ProgramSection() {
       ],
       practical: [
         {
-          title: 'Diş Hekimliğinde Botulinum Toksin',
-          speaker: "Op.Dr.Buğra Kardaşlar",
-          type: 'workshop',
-        },
-        {
-          title: 'Kompozit Venerlerde Tbakalama Sanatı',
-          speaker: "Dt. Reka Rmili",
-          type: 'workshop',
-        },
-        {
           title: 'Klinikte Dijital Tasarım',
           speaker: "Cdt. Gürkan Türköz",
           type: 'workshop',
@@ -118,6 +112,17 @@ export function ProgramSection() {
           speaker: "Cdt. Eren Aydoğan",
           type: 'workshop',
         },
+        {
+          title: 'Diş Hekimliğinde Botulinum Toksin',
+          speaker: "Op.Dr.Buğra Kardaşlar",
+          type: 'workshop',
+        },
+        {
+          title: 'Kompozit Venerlerde Tabakalama Sanatı',
+          speaker: "Dt. Refka Rmili",
+          type: 'workshop',
+        },
+
 
       ],
       praticalSubTitle: "Pratik oturum kontenjanı 12 kişidir. Kayıt gereklidir."
@@ -126,6 +131,11 @@ export function ProgramSection() {
       date: '12 Ekim 2025',
       day: 'day3',
       theoretical: [
+        {
+          time: '07:30 - 09:30',
+          title: 'Su Sporları & Yoga',
+          type: 'social',
+        },
         {
           time: '09:30 - 10:00',
           title: 'Kayıt & Karşılama',
@@ -151,11 +161,10 @@ export function ProgramSection() {
 
         {
           time: '11:40 - 12:20',
-          title: 'Diş Hekimliğinde Botulinum Toksin',
-          speaker: 'Prof. Dr. Ozan Seymen Sezen',
+          title: 'Endodontide Teknoloji ve Endokron Uyumu',
+          speaker: 'Uzm. Dt. Hayriye Ertürk',
           type: 'presentation',
         },
-
         {
           time: '12:20 - 13:00',
           title: 'Direct Composite Veneer',
@@ -175,13 +184,14 @@ export function ProgramSection() {
         },
         {
           time: '15:10 - 15:50',
-          title: 'Kapanış & Sertifika Töreni',
+          title: 'Klinik İşletmeciliğinin Geleceği',
+          speaker: 'Dt. Efe Çelebi',
           type: 'presentation',
         },
         {
           time: '15:50 - 16:30',
-          title: 'Endodontide Teknoloji ve Endokron Uyumu',
-          speaker: 'Uzm. Dt. Hayriye Ertürk',
+          title: 'Diş Hekimliğinde Botulinum Toksin',
+          speaker: 'Prof. Dr. Ozan Seymen Sezen',
           type: 'presentation',
         },
         {
@@ -192,8 +202,8 @@ export function ProgramSection() {
       ],
       practical: [
         {
-          title: 'Diş Hekimliğinde Botulinum Toksin',
-          speaker: "Dr. Gökhan Elmabaşoğlu",
+          title: 'Direkt Kompozit Venerlerde Öngörülebilir Başarı için İleri Teknikler',
+          speaker: "Prof. Dr. Esra Uzer Çelik",
           type: 'workshop',
         },
         {
@@ -202,8 +212,9 @@ export function ProgramSection() {
           type: 'workshop',
         },
         {
-          title: 'Direkt Kompozit Venerlerde Öngörülebilir Başarı için İleri Teknikler',
-          speaker: "Prof. Dr. Esra Uzer Çelik",
+
+          title: 'Diş Hekimliğinde Botulinum Toksin',
+          speaker: "Dr. Gökhan Elmabaşoğlu",
           type: 'workshop',
         },
         {
