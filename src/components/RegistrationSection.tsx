@@ -22,7 +22,7 @@ export function RegistrationSection() {
     practicalTraining: false,
     registrationDate: new Date().toLocaleString('tr-TR'),
   });
- 
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [copiedIban, setCopiedIban] = useState(false);
 
@@ -162,13 +162,15 @@ export function RegistrationSection() {
             Kayıt Ol
           </h2>
           <p className="text-xl text-blue-700 max-w-3xl mx-auto">
-            Bu özel etkinliğe şimdi katılın
+            <div className='mb-2'>İlginiz için teşekkür ederiz! Kayıtlar tamamen doldu. Bilgi için WhatsApptan bize ulaşın.</div>
+            <a href="tel:+905527045615" className="flex items-center gap-2 text-white-300 underline">
+              <PhoneIcon className="w-5 h-5" />  +90 552 704 56 15
+            </a>
           </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-3 gap-8">
-          {/* Registration Types */}
-          <motion.div
+          {/* <motion.div
             className="lg:col-span-1"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -220,10 +222,10 @@ export function RegistrationSection() {
                 </div>
               </CardContent>
             </Card>
-          </motion.div>
+          </motion.div> */}
 
-          {/* Registration Form */}
-          <motion.div
+
+          {/* <motion.div
             className="lg:col-span-2"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -347,7 +349,7 @@ export function RegistrationSection() {
                 </form>
               </CardContent>
             </Card>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </section>
